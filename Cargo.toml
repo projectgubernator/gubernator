@@ -1,3 +1,9 @@
 [workspace]
 
-members = ["gubernator", "gubernator_container", "gubernator_message"]
+members = [
+    "gubernator",
+    "gubernator_container",
+    "gubernator_controller",
+    "gubernator_message",
+    "gubernator_proxy",
+]
