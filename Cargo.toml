@@ -21,3 +21,7 @@ path = "src/lib.rs"
 [[bin]]
 name = "gubernator"
 path = "src/cli/mod.rs"
+
+[[bin]]
+name = "gubernator_service_cri"
+path = "src/service/cri.rs"

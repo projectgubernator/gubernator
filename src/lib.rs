@@ -1,4 +1,4 @@
 mod controller;
-mod generated;
+pub mod generated;
 
 pub use controller::Controller;
