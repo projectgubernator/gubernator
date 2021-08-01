@@ -174,9 +174,9 @@ impl RuntimeService for MockRuntimeService {
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     env_logger::init();
-    info!("starting MockRuntimeService on port 50049");
+    info!("starting MockRuntimeService on port 549");
 
-    let address = "[::1]:50049".parse().expect("failed to parse address");
+    let address = "0.0.0.0:549".parse().expect("failed to parse address");
     Server::builder()
         .add_service(RuntimeServiceServer::new(MockRuntimeService::default()))
         .serve(address)

@@ -1,0 +1,19 @@
+services:
+  gubernator-cri-image-service-mock:
+    image: gubernator-cri-image-service-mock:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.mock
+      args:
+        service: image
+    environment:
+      RUST_LOG: info
+  gubernator-cri-runtime-service-mock:
+    image: gubernator-cri-runtime-service-mock:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.mock
+      args:
+        service: runtime
+    environment:
+      RUST_LOG: info

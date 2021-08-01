@@ -1,0 +1,21 @@
+# BUILDER
+
+FROM rust:1.53 AS builder
+ARG service
+WORKDIR /app
+COPY . .
+RUN rustup component add rustfmt
+RUN cargo build \
+    --bin "gubernator_cri_mock_${service}" \
+    --release
+
+# RUNNER
+
+FROM rust:1.53 AS runner
+WORKDIR /app
+ARG service
+COPY --from=builder \
+    "/app/target/release/gubernator_cri_mock_${service}" \
+    "/usr/local/bin/mockedservice"
+
+ENTRYPOINT [ "mockedservice" ]
