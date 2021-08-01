@@ -1,0 +1,26 @@
+[package]
+name = "gubernator_cri"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+env_logger = "0.8.4"
+log = "0.4.0"
+prost = "0.8"
+tonic = "0.5"
+tokio = { version = "1.0", features = ["full"] }
+
+[build-dependencies]
+tonic-build = "0.5"
+
+[lib]
+name = "gubernator_cri"
+path = "src/lib.rs"
+
+[[bin]]
+name = "gubernator_cri_mock_image"
+path = "src/mock/image.rs"
+
+[[bin]]
+name = "gubernator_cri_mock_runtime"
+path = "src/mock/runtime.rs"
