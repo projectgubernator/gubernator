@@ -2,8 +2,13 @@
 
 [![Build](https://github.com/projectgubernator/gubernator/actions/workflows/build-rust.yaml/badge.svg)](https://github.com/projectgubernator/gubernator/actions/workflows/build-rust.yaml)
 
-> **Gubernator is an experimental container orchestration system.** There is not much of anything
-> to see here, yet, and there probably won't be for a while.
+**Gubernator is an experimental container orchestration system.** It is an answer to the age-old
+question: _"What if Kubernetes was built in an alternate reality where security and usability were
+important?"_
+
+> There is obviously not much of anything to see here, yet, and there probably won't be for a
+> while. If you are interested in getting involved, shoot me a message on
+> [twitter](https://twitter.com/sjroot).
 
 ## Overview
 
