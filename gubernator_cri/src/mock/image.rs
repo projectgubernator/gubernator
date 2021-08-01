@@ -58,9 +58,13 @@ impl ImageService for MockImageService {
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     env_logger::init();
-    info!("starting MockImageService on port 548");
 
-    let address = "0.0.0.0:548".parse().expect("failed to parse address");
+    let port = std::env::var("PORT").unwrap_or(String::from("548"));
+    let address = format!("0.0.0.0:{}", port)
+        .parse()
+        .expect("failed to parse address");
+
+    info!("starting MockImageService on port {}", port);
     Server::builder()
         .add_service(ImageServiceServer::new(MockImageService::default()))
         .serve(address)
