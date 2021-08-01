@@ -1,3 +1,10 @@
+//! Utilities for interacting with Gubernator manifests.
+
+pub mod common;
+mod manifest;
+
+pub use manifest::Manifest;
+
 #[cfg(test)]
 mod tests {
     #[test]
