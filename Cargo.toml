@@ -4,4 +4,5 @@ members = [
     "gubernator_cri",
     "gubernator_manifest",
     "gubernator_service_test",
+    "gubernator_state",
 ]
